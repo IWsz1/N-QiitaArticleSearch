@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>QiitaAPI</title>
+    <!-- SEO検索で出てくる文章 -->
+    <meta name="" contect="">
+    <!-- 表示領域　デバイスの幅の１倍で表示 -->
+    <meta name="vieport" content="width=device-width,initial-scale=1">
+    <!-- ページタブのアイコン(ファビコン) -->
+    <link rel="icon" href="">
+    <!-- アイコンダウンロードサイト（bootstrap)との接続 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
+    <div id="app">
+      <p><input type="text" v-model="keyword"></p>
+      <p>{{message}}</p>
+      <ul>
+        <li v-for="item in items">
+          <a v-bind:href="item.url">{{item.title}}</a>
+          likes:{{item.likes_count}}
+        </li>
+        <!-- likes:{{item.likes_count}} -->
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3.1.5"></script>
+    <script src="https://unpkg.com/axios@0.21.1/dist/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.js">
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
